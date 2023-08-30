@@ -12,7 +12,7 @@ warnings.simplefilter('ignore')
 # The file all should have everything for each node
 appended_data = pd.DataFrame()
 # Get all GPU200x data and append to single dataframe
-st.write("GPU 200 loop")
+st.write("Getting GPU 200 Data")
 for i in range(1,7):
     j = str(i)
     cols=['date', 'gpunum', 'gpuid', 'hwarenum', 'proc1', 'proc2', 'proc3', 'user', 'code', 'pid']
@@ -39,7 +39,7 @@ for i in range(1,7):
     appended_data = pd.concat([appended_data, df2], ignore_index=True)
 
 # Get all GPU400x data and append to same dataframe as above
-st.write("GPU 400 loop")
+st.write("Getting GPU 400 Data")
 for i in range(1,4):
     j = str(i)
     cols=['date', 'gpunum', 'gpuid', 'hwarenum', 'proc1', 'proc2', 'proc3', 'user', 'code', 'pid']
